@@ -1,0 +1,9 @@
+.intro {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "JetBrains Mono", monospace;
+    white-space: pre;
+    font-size: clamp(28px, 6vw, 48px);
+    margin: 0 0 8px 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.homeMain { transition: opacity 400ms ease; }
