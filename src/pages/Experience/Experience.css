@@ -1,0 +1,309 @@
+/* ─── Experience Section ─────────────────────────────── */
+.exp {
+    position: relative;
+    background: #060b17;
+    padding: 120px 7vw;
+    font-family: 'Syne', sans-serif;
+}
+
+/* slight top border to divide from About */
+.exp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 7vw;
+    right: 7vw;
+    height: 0.5px;
+    background: rgba(55, 138, 221, 0.1);
+}
+
+.exp__inner {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ─── Header ─────────────────────────────────────────── */
+.exp__header {
+    margin-bottom: 64px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.exp--visible .exp__header {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exp__section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(55, 138, 221, 0.45);
+    margin-bottom: 16px;
+}
+
+.exp__label-line {
+    display: block;
+    width: 32px;
+    height: 0.5px;
+    background: rgba(55, 138, 221, 0.35);
+}
+
+.exp__heading {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #e8f3ff;
+    line-height: 1.05;
+}
+
+/* ─── Timeline ───────────────────────────────────────── */
+.exp__timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.exp__timeline-rail {
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 0.5px;
+    background: rgba(55, 138, 221, 0.15);
+}
+
+/* ─── Timeline item ──────────────────────────────────── */
+.exp__item {
+    position: relative;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.exp--visible .exp__item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ─── Dot ────────────────────────────────────────────── */
+.exp__dot {
+    position: absolute;
+    left: -29px;
+    top: 22px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp__dot-inner {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #185fa5;
+    border: 0.5px solid #378add;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exp__item--open .exp__dot-inner {
+    background: #378add;
+    box-shadow: 0 0 8px rgba(55, 138, 221, 0.4);
+}
+
+/* ─── Card ───────────────────────────────────────────── */
+.exp__card {
+    background: rgba(14, 22, 42, 0.6);
+    border: 0.5px solid rgba(55, 138, 221, 0.12);
+    border-radius: 8px;
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    outline: none;
+}
+
+.exp__card:hover,
+.exp__card:focus-visible {
+    border-color: rgba(55, 138, 221, 0.28);
+    background: rgba(14, 22, 42, 0.85);
+}
+
+.exp__item--open .exp__card {
+    border-color: rgba(55, 138, 221, 0.25);
+}
+
+/* ─── Card top row ───────────────────────────────────── */
+.exp__card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.exp__card-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exp__card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exp__role {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #cde5f7;
+}
+
+.exp__tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1d9e75;
+    background: rgba(29, 158, 117, 0.1);
+    border: 0.5px solid rgba(29, 158, 117, 0.25);
+    border-radius: 4px;
+    padding: 2px 7px;
+}
+
+.exp__company {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: rgba(99, 168, 235, 0.45);
+}
+
+.exp__card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+.exp__period {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(120, 170, 210, 0.45);
+    white-space: nowrap;
+}
+
+.exp__location {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(100, 150, 190, 0.3);
+}
+
+.exp__toggle {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    color: rgba(55, 138, 221, 0.35);
+    line-height: 1;
+    flex-shrink: 0;
+    margin-left: 4px;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.exp__card:hover .exp__toggle {
+    color: rgba(55, 138, 221, 0.65);
+}
+
+/* ─── Expandable detail ──────────────────────────────── */
+.exp__detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease,
+    padding 0.35s ease;
+    opacity: 0;
+    padding-top: 0;
+}
+
+.exp__detail--open {
+    max-height: 600px;
+    opacity: 1;
+    padding-top: 20px;
+}
+
+/* ─── Highlights list ────────────────────────────────── */
+.exp__highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(160, 200, 235, 0.55);
+}
+
+.exp__highlight-bullet {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(55, 138, 221, 0.4);
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+
+/* ─── Stack chips ────────────────────────────────────── */
+.exp__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 4px;
+    border-top: 0.5px solid rgba(55, 138, 221, 0.08);
+    padding-top: 14px;
+}
+
+.exp__chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: rgba(99, 168, 235, 0.5);
+    background: rgba(24, 95, 165, 0.1);
+    border: 0.5px solid rgba(55, 138, 221, 0.18);
+    border-radius: 4px;
+    padding: 3px 10px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 600px) {
+    .exp__card-top {
+        flex-wrap: wrap;
+    }
+
+    .exp__card-right {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .exp__toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}

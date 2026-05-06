@@ -1,0 +1,227 @@
+/* ─── About Section ─────────────────────────────────── */
+.about {
+    position: relative;
+    background: #070d1a;
+    padding: 120px 7vw;
+    overflow: hidden;
+    font-family: 'Fraunces', sans-serif;
+}
+
+/* ─── Animated grid background ──────────────────────── */
+.about__grid-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about__grid-line {
+    width: 0.5px;
+    height: 100%;
+    background: rgba(55, 138, 221, 0.04);
+}
+
+/* ─── Scroll reveal ─────────────────────────────────── */
+.about__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.about--visible .about__inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── Section label ─────────────────────────────────── */
+.about__section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(55, 138, 221, 0.45);
+    margin-bottom: 32px;
+}
+
+.about__label-line {
+    display: block;
+    width: 32px;
+    height: 0.5px;
+    background: rgba(55, 138, 221, 0.35);
+}
+
+/* ─── Heading ────────────────────────────────────────── */
+.about__heading {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #e8f3ff;
+    margin-bottom: 28px;
+}
+
+.about__heading-accent {
+    color: #378add;
+}
+
+/* ─── Bio ────────────────────────────────────────────── */
+.about__bio {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    line-height: 1.85;
+    color: rgba(160, 200, 235, 0.5);
+    margin-bottom: 16px;
+    max-width: 420px;
+}
+
+/* ─── Award badge ────────────────────────────────────── */
+.about__award {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 12px 16px;
+    background: rgba(29, 158, 117, 0.07);
+    border: 0.5px solid rgba(29, 158, 117, 0.25);
+    border-radius: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: rgba(29, 200, 150, 0.7);
+    max-width: 380px;
+}
+
+.about__award-icon {
+    font-size: 10px;
+    color: #1d9e75;
+    flex-shrink: 0;
+}
+
+/* ─── Stats grid ─────────────────────────────────────── */
+.about__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(55, 138, 221, 0.1);
+    border: 0.5px solid rgba(55, 138, 221, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.about__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 22px 20px;
+    background: rgba(7, 13, 26, 0.95);
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about--visible .about__stat {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about__stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #6ab4f0;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.about__stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(120, 170, 210, 0.4);
+    line-height: 1.4;
+}
+
+/* ─── Focus areas ────────────────────────────────────── */
+.about__focus {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.about__focus-item {
+    padding: 20px 0;
+    border-top: 0.5px solid rgba(55, 138, 221, 0.1);
+
+    opacity: 0;
+    transform: translateX(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about__focus-item:last-child {
+    border-bottom: 0.5px solid rgba(55, 138, 221, 0.1);
+}
+
+.about--visible .about__focus-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about__focus-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.about__focus-index {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(55, 138, 221, 0.35);
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+}
+
+.about__focus-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b5d4f4;
+    letter-spacing: 0.01em;
+}
+
+.about__focus-body {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(140, 185, 220, 0.4);
+    padding-left: 28px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    .about__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about__bio {
+        max-width: 100%;
+    }
+
+    .about__award {
+        max-width: 100%;
+    }
+}
