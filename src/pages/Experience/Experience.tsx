@@ -34,7 +34,7 @@ const EXPERIENCE = [
     {
         id: "qa",
         company: "QA Ltd",
-        role: "Software Engineer",
+        role: "Apprentice Software Engineer",
         period: "Jun 2022 — Aug 2022",
         location: "London, UK (Remote)",
         tag: null,
@@ -44,7 +44,19 @@ const EXPERIENCE = [
             "Gained expertise in Java, Spring Boot, Agile methodologies, Azure Cloud fundamentals, and SQL databases.",
         ],
         stack: ["Java", "Spring Boot", "SQL", "Azure"],
-    },
+    }, {
+        id: "starbucks",
+        company: "Welcome Break - Starbucks",
+        role: "Barista",
+        period: "Mar 2021 - Aug 2022",
+        location: "London, UK",
+        tag: null,
+        highlights: [
+            "Served Coffee. I was the best.",
+            "Starbucks could not have done it without me.",
+        ],
+        stack: ["Java (coffee haha)"],
+    }
 ];
 
 function useInView(threshold = 0.1) {
@@ -133,8 +145,8 @@ export default function Experience() {
                                 {/* Expandable detail */}
                                 <div className={`exp__detail${active === job.id ? " exp__detail--open" : ""}`}>
                                     <ul className="exp__highlights">
-                                        {job.highlights.map((h, j) => (
-                                            <li key={j} className="exp__highlight">
+                                        {job.highlights.map((h) => (
+                                            <li key={h} className="exp__highlight">
                                                 <span className="exp__highlight-bullet" aria-hidden="true"/>
                                                 {h}
                                             </li>
