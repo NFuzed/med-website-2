@@ -1,7 +1,7 @@
 /* ─── About Section ─────────────────────────────────── */
 .about {
     position: relative;
-    background: #070d1a;
+    background: var(--color-bg);
     padding: 120px 7vw;
     overflow: hidden;
     font-family: 'Fraunces', sans-serif;
@@ -114,7 +114,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
-    background: rgba(55, 138, 221, 0.1);
+    background: var(--color-border);
     border: 0.5px solid rgba(55, 138, 221, 0.12);
     border-radius: 8px;
     overflow: hidden;
@@ -163,7 +163,7 @@
 
 .about__focus-item {
     padding: 20px 0;
-    border-top: 0.5px solid rgba(55, 138, 221, 0.1);
+    border-top: 0.5px solid var(--color-border);
 
     opacity: 0;
     transform: translateX(12px);
@@ -171,7 +171,7 @@
 }
 
 .about__focus-item:last-child {
-    border-bottom: 0.5px solid rgba(55, 138, 221, 0.1);
+    border-bottom: 0.5px solid var(--color-border);
 }
 
 .about--visible .about__focus-item {

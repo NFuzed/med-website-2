@@ -1,7 +1,7 @@
 /* ─── Experience Section ─────────────────────────────── */
 .exp {
     position: relative;
-    background: #060b17;
+    background: var(--color-bg-alt);
     padding: 120px 7vw;
     font-family: 'Syne', sans-serif;
 }
@@ -14,7 +14,7 @@
     left: 7vw;
     right: 7vw;
     height: 0.5px;
-    background: rgba(55, 138, 221, 0.1);
+    background: var(--color-border);
 }
 
 .exp__inner {
@@ -273,7 +273,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    padding-top: 4px;
     border-top: 0.5px solid rgba(55, 138, 221, 0.08);
     padding-top: 14px;
 }

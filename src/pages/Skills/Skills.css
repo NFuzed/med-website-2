@@ -1,7 +1,7 @@
 /* ─── Skills Section ─────────────────────────────────── */
 .skills {
     position: relative;
-    background: #060b17;
+    background: var(--color-bg-alt);
     padding: 120px 7vw;
     font-family: 'Syne', sans-serif;
 }
@@ -13,7 +13,7 @@
     left: 7vw;
     right: 7vw;
     height: 0.5px;
-    background: rgba(55, 138, 221, 0.1);
+    background: var(--color-border);
 }
 
 .skills__inner {
@@ -88,7 +88,7 @@
     color: rgba(55, 138, 221, 0.4);
     margin-bottom: 14px;
     padding-bottom: 10px;
-    border-bottom: 0.5px solid rgba(55, 138, 221, 0.1);
+    border-bottom: 0.5px solid var(--color-border);
 }
 
 /* ─── Chips ──────────────────────────────────────────── */
@@ -160,9 +160,8 @@
     gap: 14px;
     padding: 16px 20px;
     background: rgba(14, 22, 42, 0.5);
-    border: 0.5px solid rgba(55, 138, 221, 0.1);
+    border: 0.5px solid var(--color-border);
     border-radius: 8px;
-    transition: border-color 0.2s ease, background 0.2s ease;
 
     opacity: 0;
     transform: translateY(8px);
@@ -176,7 +175,7 @@
 }
 
 .skills__cert:hover {
-    border-color: rgba(55, 138, 221, 0.22);
+    border-color: var(--color-border-mid);
     background: rgba(14, 22, 42, 0.8);
 }
 

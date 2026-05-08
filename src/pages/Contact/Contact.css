@@ -1,7 +1,7 @@
 /* ─── Contact Section ────────────────────────────────── */
 .contact {
     position: relative;
-    background: #060b17;
+    background: var(--color-bg-alt);
     padding: 120px 7vw 0;
     font-family: 'Syne', sans-serif;
 }
@@ -13,7 +13,7 @@
     left: 7vw;
     right: 7vw;
     height: 0.5px;
-    background: rgba(55, 138, 221, 0.1);
+    background: var(--color-border);
 }
 
 .contact__inner {
@@ -144,10 +144,9 @@
     justify-content: space-between;
     padding: 18px 22px;
     background: rgba(10, 18, 34, 0.6);
-    border: 0.5px solid rgba(55, 138, 221, 0.1);
+    border: 0.5px solid var(--color-border);
     border-radius: 8px;
     text-decoration: none;
-    transition: border-color 0.2s ease, background 0.2s ease;
 
     opacity: 0;
     transform: translateY(8px);

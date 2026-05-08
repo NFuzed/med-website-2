@@ -1,12 +1,21 @@
 /* --- ROOT SIZE FIX --- */
-html, body, #root { min-width: 100%; }   /* at least viewport height, grows with content */
-body { margin: 0; }                        /* kill default 8px margin */
-#root { display: flex; flex-direction: column; }  /* allows main to stretch */
-.app  { flex: 1; display: flex; flex-direction: column; }  /* your top wrapper */
+html, body, #root {
+    min-width: 100%;
+}
 
-/* Optional but recommended: paint bg on both so there's never a white band */
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
 html { background: #0e0e0f; }
-body { background: #0e0e0f; color: #f6f7f8; }
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -22,6 +31,15 @@ body { background: #0e0e0f; color: #f6f7f8; }
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    --color-bg: #070d1a;
+    --color-bg-alt: #060b17;
+    --color-border: rgba(55, 138, 221, 0.1);
+    --color-border-mid: rgba(55, 138, 221, 0.22);
+
+    --font-display: 'Fraunces', serif;
+    --font-mono: 'DM Mono', monospace;
+    --font-sans: 'Syne', sans-serif;
 }
 
 a {
@@ -40,6 +58,8 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+    background: #0e0e0f;
+    color: #f6f7f8;
 }
 
 h1 {

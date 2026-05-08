@@ -69,9 +69,7 @@ export default function Intro() {
             pulse: Math.random() * Math.PI * 2,
         }));
 
-        let frame = 0;
         const draw = () => {
-            frame++;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Connections
@@ -123,14 +121,17 @@ export default function Intro() {
         };
     }, []);
 
+    const scrollTo = (id: string) => {
+        document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
+    };
+
     return (
         <section className={`intro${visible ? " intro--visible" : ""}`} id="intro">
             <canvas ref={canvasRef} className="intro__canvas"/>
 
             <div className="intro__content">
                 <div className="intro__tag">
-                    <span className="intro__tag-dot"/>
-                    London, UK · Available for opportunities
+                    <span className="intro__tag-dot"/> London, UK · Available for opportunities
                 </div>
 
                 <h1 className="intro__name">Furqan<br/>Faruqui</h1>
@@ -147,12 +148,12 @@ export default function Intro() {
                 </p>
 
                 <div className="intro__actions">
-                    <a href="#projects" className="intro__btn intro__btn--primary">
+                    <button className="intro__btn intro__btn--primary" onClick={() => scrollTo("projects")}>
                         View projects
-                    </a>
-                    <a href="#contact" className="intro__btn intro__btn--ghost">
+                    </button>
+                    <button className="intro__btn intro__btn--ghost" onClick={() => scrollTo("contact")}>
                         Get in touch →
-                    </a>
+                    </button>
                 </div>
 
                 <div className="intro__pipeline">
