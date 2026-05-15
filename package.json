@@ -1,9 +1,9 @@
 {
-  "name": "nfuzed.github.io",
+  "name": "medical-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nfuzed.github.io/",
+  "homepage": "https://nfuzed.github.io/medical-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

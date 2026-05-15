@@ -1,104 +1,226 @@
-/* --- ROOT SIZE FIX --- */
-html, body, #root {
-    min-width: 100%;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-}
-
-.app {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-
-html { background: #0e0e0f; }
-
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    width: 100%;
+    /* Primary Colors */
+    --primary: #0066cc;
+    --primary-dark: #0052a3;
+    --primary-light: #e6f0ff;
 
-    color-scheme: light dark;
-    color: rgba(20 19 17);
-    background-color: rgba(229 225 220);
+    /* Accent Colors */
+    --success: #00a86b;
+    --warning: #ff9500;
+    --danger: #dc3545;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* Neutral Colors */
+    --bg-dark: #0f1419;
+    --bg-light: #ffffff;
+    --bg-gray: #f5f6f7;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --border: #e0e0e0;
 
-    --color-bg: #070d1a;
-    --color-bg-alt: #060b17;
-    --color-border: rgba(55, 138, 221, 0.1);
-    --color-border-mid: rgba(55, 138, 221, 0.22);
+    /* Typography */
+    --font-display: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 
-    --font-display: 'Fraunces', serif;
-    --font-mono: 'DM Mono', monospace;
-    --font-sans: 'Syne', sans-serif;
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a:hover {
-    color: #535bf2;
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.app {
+    width: 100%;
     min-height: 100vh;
-    background: #0e0e0f;
-    color: #f6f7f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
 }
 
 h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
+    font-size: 2.75rem;
+    letter-spacing: -0.5px;
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
+h2 {
+    font-size: 2.25rem;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+.lead {
+    font-size: 1.125rem;
     font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--text-primary);
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: border-color 0.25s;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: var(--font-display);
 }
 
-button:hover {
-    border-color: #646cff;
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
 }
 
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.25);
 }
 
-@media (prefers-color-scheme: light) {
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
     :root {
-        color: #213547;
-        background-color: #ffffff;
+        --spacing-2xl: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-2xl: 2.5rem;
+        --spacing-xl: 1.5rem;
     }
 
-    a:hover {
-        color: #747bff;
+    h1 {
+        font-size: 2rem;
     }
 
-    button {
-        background-color: #f9f9f9;
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-large {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
 }
