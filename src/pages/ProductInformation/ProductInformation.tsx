@@ -44,7 +44,7 @@ const ProductInformation = () => {
                     </div>
                     <div className="education-image">
                         <img
-                            src="/pages/ProductInformation/image-top.jpg"
+                            src="/assets/ProductInformation/image-top.jpg"
                             alt="ProductX demonstration"
                             className="education-img"
                         />
@@ -55,7 +55,7 @@ const ProductInformation = () => {
                 <div className="education-grid education-grid-bottom">
                     <div className="education-image">
                         <img
-                            src="/pages/ProductInformation/image-bottom.jpg"
+                            src="/assets/ProductInformation/image-bottom.jpg"
                             alt="ProductX users"
                             className="education-img"
                         />

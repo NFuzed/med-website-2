@@ -7,7 +7,7 @@ const Service = () => {
 
             <div className="service-background">
                 <img
-                    src="/pages/Service/medical-bg.jpg"
+                    src="/assets/Service/medical-bg.jpg"
                     alt="Background pattern"
                     className="service-bg-img"
                 />
@@ -20,7 +20,7 @@ const Service = () => {
                         {/* Left: Device Image */}
                         <div className="service-device">
                             <img
-                                src="/pages/Service/oximeter.webp"
+                                src="/assets/Service/oximeter.webp"
                                 alt="ProductX device"
                                 className="device-img"
                             />

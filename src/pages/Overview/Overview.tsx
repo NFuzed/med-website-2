@@ -50,7 +50,7 @@ const Overview = () => {
 
                     <div className="features-image">
                         <img
-                            src="/pages/Overview/overview-image.jpg"
+                            src="/assets/Overview/overview-image.jpg"
                             alt="ProductX in action"
                             className="features-image-img"
                         />
