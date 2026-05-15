@@ -5,4 +5,5 @@ export default defineConfig({
     plugins: [react()],
     build: {sourcemap: true},
     base: '/med-website-2/',
+    publicDir: 'public',
 })
