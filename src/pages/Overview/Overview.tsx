@@ -38,7 +38,7 @@ const Overview = () => {
                         <div key={feature.title} className="feature-card">
                             <div className="feature-icon-wrapper">
                                 <img
-                                    src={`/pages/Overview/${feature.icon}.svg`}
+                                    src={`./pages/Overview/${feature.icon}.svg`}
                                     alt={feature.title}
                                     className="feature-icon-img"
                                 />
@@ -50,7 +50,7 @@ const Overview = () => {
 
                     <div className="features-image">
                         <img
-                            src="/sections/Overview/overview-image.jpg"
+                            src={'./pages/Overview/overview-image.jpg'}
                             alt="ProductX in action"
                             className="features-image-img"
                         />

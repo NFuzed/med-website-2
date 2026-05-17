@@ -32,7 +32,7 @@ const ServiceBar = () => {
                             <div key={badge.id} className="badge-item">
                                 <div className="badge-icon">
                                     <img
-                                        src={`/pages/ServiceBar/${badge.icon}`}
+                                        src={`./pages/ServiceBar/${badge.icon}`}
                                         alt={badge.title}
                                     />
                                 </div>

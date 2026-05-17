@@ -22,7 +22,7 @@ const Hero = () => {
                         video.style.opacity = '1'
                     }}
                 >
-                    <source src="/sections/Hero/video.mp4" type="video/mp4"/>
+                    <source src={`./pages/Hero/video.mp4`} type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
             </div>

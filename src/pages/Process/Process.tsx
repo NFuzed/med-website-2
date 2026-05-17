@@ -54,7 +54,7 @@ const Process = () => {
                         <div key={step.id} className="process-step">
                             <div className="process-image-wrapper">
                                 <img
-                                    src={`/pages/Process/step-${step.number}.jpg`}
+                                    src={`./pages/Process/step-${step.number}.jpg`}
                                     alt={step.title}
                                     className="process-image"
                                 />
